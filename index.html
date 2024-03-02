@@ -1,21 +1,350 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 06</title>
+    <title>Retro forum</title>
+
+    <!-- tailwind and daisyUI -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
-<body>
-    <header>
-        <h1>
-            hello
-        </h1>
+<body class="">
+
+            <!-- header section -->
+    <header class="content mx-auto max-w-7xl mt-6">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  
+                </div>
+               
+              </div>
+              <a class="btn btn-ghost text-3xl font-bold">MA S UM</a>
+            </div>
+            
+            <div class="navbar-end ">
+                <div class="flex gap-8 mr-8 ">
+
+                    <div class="border-2 p-3 rounded-full">
+                        <i class="fa-solid fa-house fa-xl"></i>
+                    </div>
+                    <div class="border-2 p-3 rounded-full">
+                        <i class="fa-solid fa-pen fa-xl"></i>
+                    </div>
+                    <div class="border-2 p-3 rounded-full">
+                        <i class="fa-solid fa-user-plus fa-xl"></i>
+                    </div>
+                    <div class="border-2 p-3 rounded-full">
+                        <i class="fa-regular fa-flag fa-xl"></i>
+                    </div>
+                    
+                    
+                    
+                </div>
+
+
+              <a class="btn bg-[#797DFC] rounded-full text-white w-28">Button</a>
+            </div>
+          </div>
     </header>
     <main>
+                <!-- banner section -->
 
+        <section class="lg:p-0 p-2 content mx-auto max-w-7xl ">
+            <img class="relative w-full h-[600px] lg:h-[500px] bg-[#12132D] rounded-[30px] mt-10" src="./images/bgbanner.png " alt="">
+
+            
+
+                <div class="absolute flex-row lg:flex  gap-56 -mt-[570px] lg:-mt-[400px] ml-10 lg:ml-32 ">
+                    <div class="">
+                        <h1 class="text-4xl lg:text-6xl font-bold text-white text-center lg:text-left">
+                            Welcome to the <br> <span class="text-[#797DFC]">ReTro</span> Forum
+                        </h1>
+                        <p class="text-[#F3F3F5] text-xs lg:text-base mt-8 text-center lg:text-left">
+                            Share your favorite opinion and win and wp <br> forum coffee mug!
+                        </p>
+                        
+                        <div class=" mt-8">
+                            <input class="p-3 pl-5 rounded-l-3xl rounded-r-lg lg:w-64" type="text" placeholder="Search here anything">
+    
+                            <button class="lg:mb-0 mb-16  btn bg-[#797DFC] rounded-r-3xl text-white w-28">Search</button>
+                        </div>
+                    </div>
+    
+                    <div class="flex lg:0 ml-1 gap-10 bg-slate-50 pl-[60px] p-10 h-60 w-80 rounded-3xl">
+                        <div class="mt-2">
+                            <p class="text-lg mb-2">Registered Users</p>
+                            <p class="text-lg mb-2">Forum</p>
+                            <p class="text-lg mb-2">Topics</p>
+                            <p class="text-lg mb-2">Replies</p>
+                        </div>
+                        <div class="mt-2">
+                            <p class="text-lg mb-2">00</p>
+                            <p class="text-lg mb-2">00</p>
+                            <p class="text-lg mb-2">00</p>
+                            <p class="text-lg mb-2">00</p>
+                        </div>
+                    </div>
+                </div>
+
+            
+
+        </section>
+
+        <!-- Let’s Discuss section -->
+
+        <section class="content mx-auto max-w-7xl mt-20">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-[#12132D]">
+                    Let’s Discuss
+                </h1>
+                <p class="mt-10 text-slate-500 mb-10">
+                    Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-10 p-2 lg:p-0">
+
+                <div class="col-span-2 ">
+                    <div class="flex border-2 border-green-400 rounded-xl h-70 p-4 lg:p-10 mb-5">
+
+                        <div class="h-10 w-16">
+                            <img class="relative rounded-xl" src="./images/download.png" alt="">
+                            <div class="absolute -mt-11 lg:-mt-16 ml-8 lg:ml-14 rounded-full bg-green-600 w-3 h-3"></div>
+                        </div>
+    
+                        <div class="">
+                            <div class="flex gap-2 lg:gap-5 ml-4 lg:ml-8 text-lg">
+                                <div class="">
+                                    <p># <span>Music</span></p>
+                                </div>
+                                <div class="">
+                                    <p>
+                                        Author : <span>Awlad Hossain</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="mt-3 ml-4 lg:ml-8 text-xl font-bold">
+                                <span>
+                                    10 Kids Unaware of Their Halloween Costume
+                                </span>
+                            </p>
+                            <p class="mt-3 ml-4 lg:ml-8 text-base text-slate-400 mb-6">
+                                It’s one thing to subject yourself to ha Halloween costume mishap because,<br> hey that’s your prerogative
+                            </p>
+                            <hr class="ml-4 lg:ml-8 border-dashed border-2 border-slate-400 mb-8">
+    
+                            <div class=" flex justify-between ml-4 lg:ml-8 text-xl">
+                                <div class="flex items-center gap-2 lg:gap-6">
+                                    <i class="fa-solid fa-comment"></i>
+                                    <p class="">560</p>
+    
+                                    <i class="fa-solid fa-eye"></i>
+                                    <p class="">1,568</p>
+    
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p class="">5 min</p>
+                                </div>
+    
+                                <div class="rounded-full bg-[#10B981] w-10 h-10">
+                                    <i class="fa-solid fa-envelope ml-[10px] mt-3"></i>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <!-- card 2222 -->
+
+                    <div class="flex border-2 border-green-400 rounded-xl h-70 p-4 lg:p-10 mb-5">
+
+                        <div class="h-10 w-16">
+                            <img class="relative rounded-xl" src="./images/download.png" alt="">
+                            <div class="absolute -mt-11 lg:-mt-16 ml-8 lg:ml-14 rounded-full bg-green-600 w-3 h-3"></div>
+                        </div>
+    
+                        <div class="">
+                            <div class="flex gap-2 lg:gap-5 ml-4 lg:ml-8 text-lg">
+                                <div class="">
+                                    <p># <span>Music</span></p>
+                                </div>
+                                <div class="">
+                                    <p>
+                                        Author : <span>Awlad Hossain</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="mt-3 ml-4 lg:ml-8 text-xl font-bold">
+                                <span>
+                                    10 Kids Unaware of Their Halloween Costume
+                                </span>
+                            </p>
+                            <p class="mt-3 ml-4 lg:ml-8 text-base text-slate-400 mb-6">
+                                It’s one thing to subject yourself to ha Halloween costume mishap because,<br> hey that’s your prerogative
+                            </p>
+                            <hr class="ml-4 lg:ml-8 border-dashed border-2 border-slate-400 mb-8">
+    
+                            <div class=" flex justify-between ml-4 lg:ml-8 text-xl">
+                                <div class="flex items-center gap-2 lg:gap-6">
+                                    <i class="fa-solid fa-comment"></i>
+                                    <p class="">560</p>
+    
+                                    <i class="fa-solid fa-eye"></i>
+                                    <p class="">1,568</p>
+    
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p class="">5 min</p>
+                                </div>
+    
+                                <div class="rounded-full bg-[#10B981] w-10 h-10">
+                                    <i class="fa-solid fa-envelope ml-[10px] mt-3"></i>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-[#cfcece77] col-span-2 lg:col-span-1 p-7 rounded-2xl h-full w-full">
+                    <div class="flex justify-between">
+                        <p class="text-base font-bold">
+                            Title
+                        </p>
+                        <p class="text-base">
+                            <i class="fa-solid fa-check mr-2"></i>
+                            Mark as read (<span>0</span>)
+                        </p>
+                    </div>
+                    <hr class="mt-4 mb-4 border-dashed border-2 border-slate-400 ">
+
+                    <div class="flex justify-between p-3 bg-white rounded-2xl">
+                        <div>
+                           <span>
+                                10 Kids Unaware of Their <br>Halloween Costume
+                           </span>
+                        </div>
+                        <div class="flex gap-3 items-center">
+                            <i class="fa-solid fa-eye"></i>
+                            <p class="">1,568</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2nd banner -->
+        <section class="clg:p-0 p-2 content mx-auto max-w-7xl relative w-full h-[700px] lg:h-[400px] bg-[#12132D] rounded-[30px] mt-10 mb-10">
+            
+            <div class="lg:flex gap-56 mt-7">
+                <div class="mt-16 ml-14">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-white">
+                        Join Our Forum
+                    </h1>
+                    <p class="text-[#F3F3F5] text-xs lg:text-base mt-8">
+                        Share your favorite opinion and win and wp forum coffee mug! Yes, you can <br> run unit tests and view the results directly within the app. 
+                    </p>
+                    
+                    <div class=" mt-8">
+        
+                        <button class="lg:mb-0 mb-16  btn bg-[#797DFC] rounded-3xl text-white w-52">Registered Now</button>
+                    </div>
+                </div>
+
+                <div class="">
+                    <img src="./images/joinforum.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Posts section -->
+
+        <section class="content mx-auto max-w-7xl mt-20">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-[#12132D]">
+                    Latest Posts
+                </h1>
+                <p class="mt-10 text-slate-500 mb-10">
+                    Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .
+                </p>
+            </div>
+
+
+            <div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+                    <div class="p-4 ml-5 lg:ml-0 card w-96 bg-base-100 shadow-xl">
+                        <figure><img class="rounded-2xl" src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <div class="flex gap-3 items-center text-slate-400">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>
+                                    <span>
+                                        29 January 2024
+                                    </span>
+                                </p>
+                            </div>
+                          <h2 class="card-title font-bold text-lg mt-2">
+                            What will a mars habitat force that impact in our daily life!!!
+                          </h2>
+                          <p class="mt-2">
+                            Yes, you can run unit tests and view the results directly within the app. 
+                          </p>
+
+
+                          <div class="flex  gap-4">
+                            <div class="h-8 w-14 mt-4">
+                                <img class="relative rounded-full" src="./images/download.png" alt="">
+                            </div>
+                            <div class="pt-6">
+                                <p class="font-bold">
+                                    Cameron Williamson
+                                </p>
+                                <p class="text-slate-400">
+                                    Unknown
+                                </p>
+                            </div>
+        
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
+            <!-- footer  -->
+    <footer class="mt-20">
+        <footer class="footer footer-center p-10 bg-[#12132D] text-primary-content">
+            <aside>
+              <h1 class="text-5xl font-bold">
+                MA S UM
+            </h1>
+              <p class="mt-4 text-lg">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a <br> piece of classical Latin literature from 45 BC
+              </p> 
+            </aside> 
+            <nav>
+              <div class="grid grid-flow-col gap-10 text-3xl">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i>
 
+              </div>
+              <hr class="mt-10 mb-10 text-red-900">
+              <p>Copy right © 2024 - All right reserved by MA S UM</p>
+
+            </nav>
+            
+          </footer>
     </footer>
 
     <script src="script.js"></script>
