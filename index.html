@@ -11,15 +11,75 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- font awesome -->
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
 
 </head>
 <body class="">
 
             <!-- header section -->
     <header class="content mx-auto max-w-7xl mt-6">
+
         <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <!-- <div class="flex gap-8 mr-8 ">
+
+                        <div class="border-2 p-3 rounded-full">
+                            <i class="fa-solid fa-house fa-xl"></i>
+                        </div>
+                        <div class="border-2 p-3 rounded-full">
+                            <i class="fa-solid fa-pen fa-xl"></i>
+                        </div>
+                        <div class="border-2 p-3 rounded-full">
+                            <i class="fa-solid fa-user-plus fa-xl"></i>
+                        </div>
+                        <div class="border-2 p-3 rounded-full">
+                            <i class="fa-regular fa-flag fa-xl"></i>
+                        </div>
+                    </div> -->
+                  <li>
+                    
+                  </li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-3xl font-bold">MA S UM</a>
+            </div>
+            <div class="navbar-end ml-[60%] hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <div class="flex gap-8 mr-8">
+
+                    <div class="border-2 p-3 rounded-full">
+                        <i class="fa-solid fa-house fa-xl " title="Home"></i>
+                    </div>
+                    <div class="border-2 p-3 rounded-full">
+                        <i class="fa-solid fa-pen fa-xl"  title="Tooltip"></i>
+                    </div>
+                    <div class="border-2 p-3 rounded-full">
+                        <i class="fa-solid fa-user-plus fa-xl" title="User Plus"></i>
+                    </div>
+                    <div class="border-2 p-3 rounded-full">
+                        <i class="fa-regular fa-flag fa-xl" title="Flag"></i>
+                    </div>
+                </div>
+                <li>
+                  
+                </li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn bg-[#797DFC] rounded-full text-white w-28">Sign In</a>
+            </div>
+          </div>
+
+        <!-- navbar -->
+        <!-- <div class="navbar bg-base-100">
             <div class="navbar-start">
               <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -31,6 +91,7 @@
             </div>
             
             <div class="navbar-end ">
+            
                 <div class="flex gap-8 mr-8 ">
 
                     <div class="border-2 p-3 rounded-full">
@@ -45,15 +106,12 @@
                     <div class="border-2 p-3 rounded-full">
                         <i class="fa-regular fa-flag fa-xl"></i>
                     </div>
-                    
-                    
-                    
                 </div>
 
 
-              <a class="btn bg-[#797DFC] rounded-full text-white w-28">Button</a>
+              <a class="btn bg-[#797DFC] rounded-full text-white w-28">Sign In</a>
             </div>
-          </div>
+          </div> -->
     </header>
     <main>
                 <!-- banner section -->
@@ -73,9 +131,9 @@
                         </p>
                         
                         <div class=" mt-8">
-                            <input class="p-3 pl-5 rounded-l-3xl rounded-r-lg lg:w-64" type="text" placeholder="Search here anything">
+                            <input id="search-box" class="p-3 pl-5 rounded-l-3xl rounded-r-lg lg:w-64" type="text" placeholder="Search here anything">
     
-                            <button class="lg:mb-0 mb-16  btn bg-[#797DFC] rounded-r-3xl text-white w-28">Search</button>
+                            <button onclick="search()" id="search-btn" class="lg:mb-0 mb-16  btn bg-[#797DFC] rounded-r-3xl text-white w-28">Search</button>
                         </div>
                     </div>
     
@@ -102,6 +160,8 @@
         <!-- Let’s Discuss section -->
 
         <section class="content mx-auto max-w-7xl mt-20">
+
+
             <div class="text-center">
                 <h1 class="text-5xl font-bold text-[#12132D]">
                     Let’s Discuss
@@ -111,10 +171,16 @@
                 </p>
             </div>
 
+            <div id="loading-spinner" class="text-center mt-16 " >
+                <!-- <span class="loading loading-spinner text-warning"></span> -->
+                <span class="loading loading-bars loading-lg"></span>
+            </div>
+
             <div class="grid lg:grid-cols-3 gap-10 p-2 lg:p-0">
 
-                <div class="col-span-2 ">
-                    <div class="flex border-2 border-green-400 rounded-xl h-70 p-4 lg:p-10 mb-5">
+                <div class="col-span-2" id="let-discuss-cards">
+
+                    <!-- <div class="flex border-2 border-green-400 rounded-xl h-70 p-4 lg:p-10 mb-5">
 
                         <div class="h-10 w-16">
                             <img class="relative rounded-xl" src="./images/download.png" alt="">
@@ -160,57 +226,8 @@
                             </div>
     
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- card 2222 -->
-
-                    <div class="flex border-2 border-green-400 rounded-xl h-70 p-4 lg:p-10 mb-5">
-
-                        <div class="h-10 w-16">
-                            <img class="relative rounded-xl" src="./images/download.png" alt="">
-                            <div class="absolute -mt-11 lg:-mt-16 ml-8 lg:ml-14 rounded-full bg-green-600 w-3 h-3"></div>
-                        </div>
-    
-                        <div class="">
-                            <div class="flex gap-2 lg:gap-5 ml-4 lg:ml-8 text-lg">
-                                <div class="">
-                                    <p># <span>Music</span></p>
-                                </div>
-                                <div class="">
-                                    <p>
-                                        Author : <span>Awlad Hossain</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="mt-3 ml-4 lg:ml-8 text-xl font-bold">
-                                <span>
-                                    10 Kids Unaware of Their Halloween Costume
-                                </span>
-                            </p>
-                            <p class="mt-3 ml-4 lg:ml-8 text-base text-slate-400 mb-6">
-                                It’s one thing to subject yourself to ha Halloween costume mishap because,<br> hey that’s your prerogative
-                            </p>
-                            <hr class="ml-4 lg:ml-8 border-dashed border-2 border-slate-400 mb-8">
-    
-                            <div class=" flex justify-between ml-4 lg:ml-8 text-xl">
-                                <div class="flex items-center gap-2 lg:gap-6">
-                                    <i class="fa-solid fa-comment"></i>
-                                    <p class="">560</p>
-    
-                                    <i class="fa-solid fa-eye"></i>
-                                    <p class="">1,568</p>
-    
-                                    <i class="fa-regular fa-clock"></i>
-                                    <p class="">5 min</p>
-                                </div>
-    
-                                <div class="rounded-full bg-[#10B981] w-10 h-10">
-                                    <i class="fa-solid fa-envelope ml-[10px] mt-3"></i>
-                                </div>
-                            </div>
-    
-                        </div>
-                    </div>
                     
                 </div>
 
@@ -221,7 +238,7 @@
                         </p>
                         <p class="text-base">
                             <i class="fa-solid fa-check mr-2"></i>
-                            Mark as read (<span>0</span>)
+                            Mark as read (<span id="seat-count">0</span>)
                         </p>
                     </div>
                     <hr class="mt-4 mb-4 border-dashed border-2 border-slate-400 ">
@@ -280,8 +297,8 @@
 
 
             <div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
-                    <div class="p-4 ml-5 lg:ml-0 card w-96 bg-base-100 shadow-xl">
+                <div id="card-container" class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+                    <!-- <div class="p-4 ml-5 lg:ml-0 card w-96 bg-base-100 shadow-xl">
                         <figure><img class="rounded-2xl" src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
                         <div class="card-body">
                             <div class="flex gap-3 items-center text-slate-400">
@@ -315,7 +332,7 @@
         
                           </div>
                         </div>
-                      </div>
+                      </div> -->
                 </div>
             </div>
         </section>
