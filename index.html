@@ -133,7 +133,7 @@
                         <div class=" mt-8">
                             <input id="search-box" class="p-3 pl-5 rounded-l-3xl rounded-r-lg lg:w-64" type="text" placeholder="Search here anything">
     
-                            <button onclick="search()" id="search-btn" class="lg:mb-0 mb-16  btn bg-[#797DFC] rounded-r-3xl text-white w-28">Search</button>
+                            <button onclick="handleSearch()" id="search-btn" class="lg:mb-0 mb-16  btn bg-[#797DFC] rounded-r-3xl text-white w-28">Search</button>
                         </div>
                     </div>
     
@@ -170,6 +170,8 @@
                     Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .
                 </p>
             </div>
+
+            <!-- loading spinner -->
 
             <div id="loading-spinner" class="text-center mt-16 " >
                 <!-- <span class="loading loading-spinner text-warning"></span> -->
@@ -243,16 +245,20 @@
                     </div>
                     <hr class="mt-4 mb-4 border-dashed border-2 border-slate-400 ">
 
-                    <div class="flex justify-between p-3 bg-white rounded-2xl">
-                        <div>
-                           <span>
-                                10 Kids Unaware of Their <br>Halloween Costume
-                           </span>
-                        </div>
-                        <div class="flex gap-3 items-center">
-                            <i class="fa-solid fa-eye"></i>
-                            <p class="">1,568</p>
-                        </div>
+                    <div id="shoCard">
+<!-- 
+                        <div class="flex justify-between p-3 bg-white rounded-2xl">
+                            <div>
+                               <span>
+                                    10 Kids Unaware of Their <br>Halloween Costume
+                               </span>
+                            </div>
+                            <div class="flex gap-3 items-center">
+                                <i class="fa-solid fa-eye"></i>
+                                <p class="">1,568</p>
+                            </div>
+                        </div> -->
+
                     </div>
                 </div>
 
