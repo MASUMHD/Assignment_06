@@ -145,7 +145,7 @@ const showAllCards = async () => {
         const div = document.createElement('div');
 
         div.innerHTML = `
-        <div class="p-4 ml-5 lg:ml-0 card w-96 bg-base-100 shadow-xl">
+        <div class="p-4 ml-0 lg:ml-0 card  bg-base-100 shadow-xl">
         <figure><img class="rounded-2xl" src="${cards.cover_image}" alt="Shoes" /></figure>
         <div class="card-body">
             <div class="flex gap-3 items-center text-slate-400">
